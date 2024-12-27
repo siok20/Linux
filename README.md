@@ -18,10 +18,54 @@
 
 `cd`: Change Directory
 
+`clear`: limpiar la pantalla del terminal
+
+`file` : retorna el tipo de archivo
+
+`mkdir` : Make Directory
+
+`mkdir [RUTA] [RUTA] ...`
+
+`touch` : Crea un archivo vacío
+
+`touch [RUTA] [RUTA] ...`
+
+`cat` : Concatenate, escribe el contenido de archivos
+
+`echo` : Imprime en la terminal o fichero
+
+`echo Hola Linux` o `echo Hola Linux > message.txt` (Reescribe el contenido)
+
+`echo Hola Linux >> message.txt` (Escribe en la ultima linea)
+
+
+`cp` : Copy, Copia un archivo
+
+`cp -r` :  Copy recursive, Copia un directorio recursivamente
+
+`cp [Archivo a copiar] [RUTA DESTINO]`
+
+`mv` : Move. Mueve ficheros
+
+`mv [SOURCE] [DESTINY]`
+
+`rm` : Remove files or directories `-r`
+
+`rmdir` : Remove empty directories
+
 `man`: Manual, visualizar documentacion de cada comando
 
 `man [COMANDO]`
 
+## Metacaracteres
+
+`/usr/bin`: Fichero en el que se encuentran los metacaracteres
+
+`*` : Reemplaza cualquier caracter(es) (Regex)
+
+`?` : reemplza solo *un* carácter
+
+`[]` : Reemplaza solo uno de los caracteres dentro
 
 ## Usuarios
 
