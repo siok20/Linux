@@ -59,7 +59,15 @@
 
 ## Otros Comandos
 
-`tail` : output the last part of files (10 lines). Para ver *x* lineas `-n x`
+`tail` : output the last part of files (10 lines). Para ver *x* lineas `-n x`, `-f` : Follow, muestra el cambio del contedio
+
+`head` : Sigue la misma logica de `tail` para las primera lineas
+
+`more` : Display the contents of a file in a terminalqqq
+
+`less` : Similar to more, but it has many more feature
+
+`tree` : List contents of directories in a tree
 
 ## Metacaracteres
 
