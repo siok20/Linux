@@ -57,6 +57,10 @@
 
 `man [COMANDO]`
 
+## Otros Comandos
+
+`tail` : output the last part of files (10 lines). Para ver *x* lineas `-n x`
+
 ## Metacaracteres
 
 `/usr/bin`: Fichero en el que se encuentran los metacaracteres
