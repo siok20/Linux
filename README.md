@@ -1,5 +1,7 @@
 # Manual Linux - Ubuntu 
 
+## Comandos simples
+
 `sudo -i` : acceder a consola superusuario
 
 `free -mh` : Visualizar memoria
@@ -7,6 +9,18 @@
 `top`: ver procesos
 
 `htop`: visualizacón más gráfica de los procesos
+
+`pwd`: Print Working Directory
+
+`ls`: List, lista el contenido de un directorio
+
+`ls [OPCIONES] [RUTA]`
+
+`cd`: Change Directory
+
+`man`: Manual, visualizar documentacion de cada comando
+
+`man [COMANDO]`
 
 
 ## Usuarios
@@ -49,4 +63,20 @@ cerrar sesión
 
 Forma de guardar los datos. Usa una estructura tipo árbol
 
-![alt text](linux_tree.png)
+
+### Sistema de ficheros
+
+`Windows`: FAT, FAT-32, EXFAT, NTFS
+
+`Linux`: EXT2, EXT4 ...
+
+#### EXT4
+`Cuarto Sistema de Archivos Extendido`
+
+Minix fue creado inicialmente en 1987 por Andrew S. Tanenbaum como herramienta educativa para su libro "Operating Systems Design and Implementation". Este sistema de archivos motivó a Linus Torvalds a desarrollar Linux, y algunos de sus primeros trabajos fueron escritos en MINIX.
+
+`EXT`: (Extended) fue compuesto por Rémy Card y lanzado con el sistema operativo Linux en 1992 para superar las limitaciones de tamaño del sistema de archivos Minix. Fue rápidamente sustituido por el sistema de archivos EXT2.
+
+`EXT2`: tiene esencialmente las mismas estructuras de metadatos que el sistema de archivos EXT. Sin embargo, EXT2 es más sencillo si tienes en cuenta la cantidad de espacio en disco que queda entre las estructuras de metadatos para su próximo uso.
+
+`EXT3`: tenía el objetivo expreso de superar las grandes porciones de tiempo que el programa fsck necesitaba para recuperar completamente una estructura de disco saboteada. La función de registro en el diario disminuye el tiempo necesario para comprobar el disco duro en busca de incoherencias después de un fallo, pasando de días a sólo unos minutos, como máximo.  
