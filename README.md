@@ -75,6 +75,30 @@
 
 `df` : Disk free, report file system space usage
 
+`ps` : Muestra el shell que tienes abierto
+
+`type` : Muestra si un comando es interno o externo del shell de Linux
+
+`history <n>` : Retorna el historial de comandos usado en la terminal (los n ultimos), `-d <n>` elimina del historial el comando de numero n
+
+`!!` : ejecuta el ultimo comando ejecutado
+
+`!<n>` : ejecuta el comando de numero n
+
+`gedit <file_name>` : Abre un editor de texto (Similar al de windows)
+
+`which <name>` : Retorna el path de name
+
+`whereis <name>` : Retorna la ubicacion del binario, la fuente y manual de uso
+
+## Abrir otra sesion
+
+`ctrl + alt + F[3456]` : Abre una sesion de terminal virtual
+
+Nos da la opcion de loguearnos como otro usuario además del entorno gráfico
+
+`who` : Nos retorna los usuarios con sesion abierta
+
 ## Metacaracteres
 
 `/usr/bin`: Fichero en el que se encuentran los metacaracteres
