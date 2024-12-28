@@ -71,6 +71,10 @@
 
 `ln` : Make links betwwen file
 
+`du` : Disk usage, Return the estimate file space usage
+
+`df` : Disk free, report file system space usage
+
 ## Metacaracteres
 
 `/usr/bin`: Fichero en el que se encuentran los metacaracteres
