@@ -69,6 +69,8 @@
 
 `tree` : List contents of directories in a tree
 
+`ln` : Make links betwwen file
+
 ## Metacaracteres
 
 `/usr/bin`: Fichero en el que se encuentran los metacaracteres
@@ -136,3 +138,19 @@ Minix fue creado inicialmente en 1987 por Andrew S. Tanenbaum como herramienta e
 `EXT2`: tiene esencialmente las mismas estructuras de metadatos que el sistema de archivos EXT. Sin embargo, EXT2 es más sencillo si tienes en cuenta la cantidad de espacio en disco que queda entre las estructuras de metadatos para su próximo uso.
 
 `EXT3`: tenía el objetivo expreso de superar las grandes porciones de tiempo que el programa fsck necesitaba para recuperar completamente una estructura de disco saboteada. La función de registro en el diario disminuye el tiempo necesario para comprobar el disco duro en busca de incoherencias después de un fallo, pasando de días a sólo unos minutos, como máximo.  
+
+## Enlaces
+
+- Enlaces físicos (hard)
+- Enlaces simólicos (soft)
+
+### inodo
+
+Fichero -> inodo (almacena información de un fichero) -> Número de inodo (Metadatos)
+
+### Enlace físico
+Identifica al mismo contenido con diferentes nombres. No es una copia separada, está apuntando al inodo
+
+### Enlace simbólico
+No contiene los datos del archivo. Apunta al registro del sitema de archivos donde encuentra los datos. Si borramos el fichero origina el enlace no funciona
+
