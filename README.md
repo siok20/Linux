@@ -1,4 +1,41 @@
 # Manual Linux - Ubuntu 
+Linux recibe las instrucciones como un string.
+Una entrada estándar de teclado entra como `stdin(0)`
+al proceso Linux y se puede obtener una salida e monitor `stdout(1)`
+o con un error `stderr(2)`. Se pueden cambiar las entradas y salidas estándar
+
+Ejemplo de escribir un error :
+El `2` indica que se escriba el error en caso exista
+```bash
+-> % cat doc 2> error
+-> % cat error
+cat: doc: No existe el archivo o el directorio
+```
+
+Se puede hacer similar con el `1` para salidas exitosas
+
+Para no recibir ninguna salida se puede enviar al directorio `/dev/null`
+
+```bash
+-> % cat doc 2> /dev/null
+```
+
+Los comandos Linux manejan entrada estandar y salida estandar
+
+```bash
+siok@PYT [14:41:15] [~/ManualLinux] [main *]
+-> % echo Hola
+Hola
+
+siok@PYT [14:41:20] [~/ManualLinux] [main *]
+-> % cat ejj
+cat: ejj: No existe el archivo o el directorio
+```
+
+Comandos como `cat` pueden tener entrada de ficheros
+
+
+Para redireccionar la salida de un comando a un fichero se usa `>` (sobreescribe) o `>>` (agrega)
 
 ## Comandos simples
 
@@ -97,6 +134,15 @@ Para hacerlo permanente, se debe agregar a la configuración del shell
 
 Ten cuidado con las comillas si tienes variables en el comando: si usas comillas dobles, la variable se resuelve en el momento de definición. Si usas comillas simples, se resuelve en el momento de la invocación.
 
+`tr` : Translate or delete characters
+
+```bash
+-> % tr a o
+hola
+holo
+```
+
+`wc` : print new line, word and byte counts for each file
 
 ## Comandos de tiempo
 
@@ -118,9 +164,9 @@ Ten cuidado con las comillas si tienes variables en el comando: si usas comillas
 
 `uptime` : Tell how long the system has been running
 
+## Redirección
 
-
-
+Enviar la salida de un comando como entrada de otro
 
 ## Abrir otra sesion
 
