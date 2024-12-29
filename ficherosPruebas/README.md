@@ -88,3 +88,73 @@ $ wc << ult
 > ult
       4       4      12
 ```
+
+## Pipe
+
+```bash
+-> % cat prueba1.txt | tr a p
+Fichero de pruebp
+Mps pruebps pprp mostrpr
+```
+
+`tr` espera la salida de `cat` (el contenido de `prueba1.txt.`) como su entrada
+
+```bash
+-> % cat prueba1.txt | tr a p | wc
+      2       7      43
+```
+Generamos un `pipeline` en la que combinamos más de dos comandos
+
+
+## uniq
+
+Creamos un archivo `prueba2.txt` 
+
+```bash
+-> % gedit prueba2.txt 
+```
+
+ con el siguiente texto
+
+```
+juan
+juan
+juan
+jose
+ana
+ana
+sebas
+sebas
+jose
+jose
+```
+
+Usamos el comando `uniq` (solo considera filas consecutivas)
+
+```bash
+-> % cat prueba2.txt | uniq
+juan
+jose
+ana
+sebas
+jose
+```
+Para contar la recurrencia
+
+```bash
+-> % cat prueba2.txt | uniq -c
+      3 juan
+      1 jose
+      2 ana
+      2 sebas
+      2 jose
+```
+Solo mostrar los repetidos
+
+```bash
+-> % cat prueba2.txt | uniq -d
+juan
+ana
+sebas
+jose
+```

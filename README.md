@@ -164,9 +164,22 @@ holo
 
 `uptime` : Tell how long the system has been running
 
-## Redirección
+## Comandos filtros
+Necesitan entrada de otras instrucciones
+`wc`, `grep`, `sort`, `diff`, `cut`, `uniq`
 
-Enviar la salida de un comando como entrada de otro
+`uniq` : Report or emit repeated lines
+
+## Pipe
+
+`|` Permite enviar la salida de un comando hacia otro
+
+- Ejm: Contar la cantidad de commits en un repositorio de git
+
+```bash
+-> % git log --oneline | wc -l
+12
+```
 
 ## Abrir otra sesion
 
