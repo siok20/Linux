@@ -91,6 +91,37 @@
 
 `whereis <name>` : Retorna la ubicacion del binario, la fuente y manual de uso
 
+`alias` : Crear un macro que apunta al comando que elijamos
+Para hacerlo permanente, se debe agregar a la configuración del shell
+`alias tam = 'du -sm /home/siok' `
+
+Ten cuidado con las comillas si tienes variables en el comando: si usas comillas dobles, la variable se resuelve en el momento de definición. Si usas comillas simples, se resuelve en el momento de la invocación.
+
+
+## Comandos de tiempo
+
+`time` :  run programs and summarize system resource usage
+
+`time [COMMAND]`
+
+`cal` : `sudo apt-get install bsdmainutils` , nos da un calendario
+
+`cal <año>`
+
+`ncal` : Entrega el calendario en otro formato
+
+`date` : print or set the system date and time
+
+`date +'%<> %<> ...'`
+
+`date ddmmhhmmyyyy` : Actualizar la fecha y hora del sistema
+
+`uptime` : Tell how long the system has been running
+
+
+
+
+
 ## Abrir otra sesion
 
 `ctrl + alt + F[3456]` : Abre una sesion de terminal virtual
