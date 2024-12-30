@@ -100,7 +100,7 @@ Para redireccionar la salida de un comando a un fichero se usa `>` (sobreescribe
 
 `head` : Sigue la misma logica de `tail` para las primera lineas
 
-`more` : Display the contents of a file in a terminalqqq
+`more` : Display the contents of a file in a terminal
 
 `less` : Similar to more, but it has many more feature
 
@@ -201,6 +201,60 @@ Necesitan entrada de otras instrucciones
 12
 ```
 
+## Procesos
+ - Un programa que se esta ejecutando
+ - Linux es multitarea y multiusuario
+ - Estructura jerárquica `padre-hijo`
+ - Estados: 
+    - Normal
+    - Daemon : servicios en segundo plano
+    - Zombie : procesos eliminados, aún no limpiados
+
+- Propiedades : 
+    - PID (Process ID): código único de proceso
+    - UID, GID, USer ID y Group ID
+    - PPID: PID del proceso Padre, excepto el proceso 1, PID1 , Systemd o init
+    - Contexto: Direcciones, codigo variables, etc
+
+- Proceso hijo: 
+    - Se crean mediante `fork` del padre
+    - El proceso hijo hereda algunas características del padre
+
+    `Proceso padre (shell) -fork-> Proceso hijo (ls)`
+
+### Comandos de procesos
+
+`ps` : Process status
+`ps -f` y `ps -f`
+
+Todos los procesos
+`ps -ef`
+
+En forma de árbol 
+`ps -ejH`
+
+`pstree` : display a tree of processes
+
+`sleep <time(s)>` : Pausa el proceso unos segundos
+
+`kill` : send a signal to process
+
+`kill -l` : list signal names
+
+`kill -<n_signal> <PID>`
+
+`jobs` : Muestra los trabajos que el sistema esta realizando
+
+Un job se crea generando un proceso en segundo plano con `&`
+
+`fg <n_job>` : traer a primer plano un job
+
+### PRIORIDAD
+`-20` la más alta hasta `+19` la más baja
+
+`renice <new_priority> <PID>` : Cambia la prioridad de un proceso
+
+
 ## Abrir otra sesion
 
 `ctrl + alt + F[3456]` : Abre una sesion de terminal virtual
@@ -237,7 +291,6 @@ Cada usuario pertenece almenos a un grupo
 - Su prompt comienza con `#`
 
 ```bash
-siok@PYT [21:20:04] [~/ManualLinux] [main]
 -> % sudo -i
 root@PYT:~# 
 root@PYT:~# exit
