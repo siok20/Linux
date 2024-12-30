@@ -158,3 +158,118 @@ ana
 sebas
 jose
 ```
+
+## tee
+
+prueba con tee
+
+```bash
+-> % ping www.google.com | tee prueba3.txt
+PING www.google.com (64.233.186.103) 56(84) bytes of data.
+```
+
+## grep
+Buscar la palabra `ana` en los ficheros de la caroeta de trabajo
+```bash
+grep ana *
+prueba2.txt:ana
+prueba2.txt:ana
+README.md:ana
+README.md:ana
+README.md:ana
+README.md:      2 ana
+README.md:ana
+```
+Buscar la palabara `error` en los logs del sistema
+```bash
+-> % grep -s error /var/log/*.log
+```
+
+BUscar los ficheros donde aparece la palabra `error`
+```bash
+-> % grep -sl error /var/log/*.log
+/var/log/apport.log
+/var/log/auth.log
+/var/log/kern.log
+```
+Buscar los ficheros donde aparece la palabra `error` y su concurrencia
+
+```bash
+-> % grep -sc error /var/log/*.log
+/var/log/alternatives.log:0
+/var/log/apport.log:1
+/var/log/auth.log:107
+/var/log/bootstrap.log:0
+/var/log/cloud-init.log:0
+/var/log/cloud-init-output.log:0
+/var/log/dpkg.log:0
+/var/log/fontconfig.log:0
+/var/log/gpu-manager.log:0
+/var/log/kern.log:3
+/var/log/ubuntu-advantage-apt-hook.log:0
+/var/log/vbox-setup.log:0
+```
+Utilizandolo con pipe
+```bash
+-> % ls -l | grep error
+-rw-rw-r-- 1 siok siok   47 dic 29 17:21 error
+```
+
+## sort
+
+Ordenar las lineas de un fichero
+```bash
+-> % sort prueba2.txt
+ana
+ana
+jose
+jose
+jose
+juan
+juan
+juan
+sebas
+sebas
+```
+
+Con un output
+```bash
+-> % sort prueba2.txt -o sort_prueba2.txt
+```
+
+Con un pipe 
+
+```bash
+-> % ls | sort            
+error
+prueba1.txt
+prueba2.txt
+prueba3.txt
+README.md
+sort_prueba2.txt
+```
+
+Ordenar en un orden inverso
+
+```bash
+-> % ls | sort -r         
+sort_prueba2.txt
+README.md
+prueba3.txt
+prueba2.txt
+prueba1.txt
+error
+```
+
+ordenar por orden numerico
+
+```bash
+-> % du -ah | sort -n  
+4,0K	./error
+4,0K	./prueba1.txt
+4,0K	./prueba2.txt
+4,0K	./prueba3.txt
+4,0K	./README.md
+4,0K	./sort_prueba2.txt
+28K   	.
+```

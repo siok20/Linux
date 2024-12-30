@@ -144,6 +144,10 @@ holo
 
 `wc` : print new line, word and byte counts for each file
 
+`ping` : send request to network hosts
+
+`ping www.google.com`
+
 ## Comandos de tiempo
 
 `time` :  run programs and summarize system resource usage
@@ -169,6 +173,22 @@ Necesitan entrada de otras instrucciones
 `wc`, `grep`, `sort`, `diff`, `cut`, `uniq`
 
 `uniq` : Report or emit repeated lines
+
+`tee` : read from standard input and write to standard output and files
+
+`grep` : escribe lineasbuscadas en ficheros
+
+`sort` : sort lines of text files
+
+`cut` : remove sections from each line of files
+
+`du -a | cut -f1`
+
+`cat /etc/passwd | cut -d ':' -f5`
+
+`ls -l | cut -d ' ' -f3`
+
+`ls -l | cut -c 1-10`
 
 ## Pipe
 

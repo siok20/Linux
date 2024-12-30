@@ -1,0 +1,1 @@
+PING www.google.com (64.233.186.103) 56(84) bytes of data.
