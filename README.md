@@ -302,6 +302,89 @@ cerrar sesión
 - Los crea el root
 - `/home`: su directorio
 
+`less /etc/paswd` : Ver todos los uduarios y su id
+
+`less /etc/group` : Ver todos los gruposq y su id
+
+`id` : Muestra el id del usuario activo
+
+`useradd` : Crear un usuario
+
+`(sudo) useradd -b /home/<username>`
+
+Cambiar la contraseña de un usuario
+
+`(sudo) sudo passwd <username>`
+
+
+#### Permisos de archivos
+
+tipo de fichero: 
+-   `-` : ficheros
+-   `l` : enlaces
+-   `d` : directorio
+-   `b` : bloque
+
+Permisos: 
+-   `r` : Read, permiso de leer el archivo
+-   `w` : Write, permiso de modificar el archivo
+-   `x` : Archivo ejecutable
+-   `-` : permiso inactivo
+
+Permisos de un archivo:
+ Compuesto por 9 caracteres, el primero indica el tipo de archivo, los 3 siguientes indican los permisos para el propietario del archivo, los 3 siguientes son los permisos para el grupo del autor y los últimos 3 son los permisos para otros usuarios
+
+ `drwxr-xr-x`
+
+ Representación numérica (octal): 
+ `r = 4` , `w = 2`, `x = 1`, Suma los valores para definir el permiso
+
+ #### Cambiar modo
+
+ `chmod` : Change mod. Change file mode bits
+
+ `chmod <ugoa><+-><rwx> file` 
+
+ `chmod <representacion_octal> file`
+
+`umask` : get file mode creation mask
+
+`umask <n>` : set file mode creation mask
+
+Valor máximo para ficheros `666`, se le resta la máscara `002` (en mi equipo) para darnos el valor por defecto `664`
+
+Valor máximo para directorios `777`, se le resta la máscara `002` (en mi equipo) para darnos el valor por defecto `775`
+
+
+#### Cambiar propietario y grupo
+
+`chown` : Change file owner and group
+
+Necesitamos permisos de `w` para modificar o ser `superusuario`
+
+```bash
+EXAMPLES
+       chown root /u
+              Change the owner of /u to "root".
+
+       chown root:staff /u
+              Likewise, but also change its group to "staff".
+
+       chown -hR root /u
+              Change the owner of /u and subfiles to "root".
+```
+`chgrp` : Cambia el grupo de un archivo
+
+
+```bash
+EXAMPLES
+       chgrp staff /u
+              Change the group of /u to "staff".
+
+       chgrp -hR staff /u
+              Change the group of /u and subfiles to "staff".
+```
+
 ### Usuarios especiales
 
 - Para ejecutar diversos procesos en el sistema. Ejm:
