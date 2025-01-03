@@ -212,7 +212,7 @@ Necesitan entrada de otras instrucciones
 
 `find [OPTION] [HEAD] -name "<file_name>"`
 
-````bash
+```bash
 -amin n
               File was last accessed less than, more than or exactly n minutes ago.
 
@@ -268,8 +268,61 @@ Necesitan entrada de otras instrucciones
               type letters separated by a comma `,' 
 ```
 
+## TAR
 
+Empaqueta archivos (Tape ARchive, porque originalmente se usaba para almacenar archivos en cintas magnéticas), actualmente puede comprimir archivos
 
+`tar` : an archiving utility
+
+```bash
+Operation mode
+
+-c, --create
+              Create a new archive.  Arguments supply the names of the files to  be  archived.
+              Directories are archived recursively, unless the --no-recursion option is given.
+
+-t, --list
+              List the contents of an archive.
+
+-u, --update
+              Append files which are newer than the corresponding copy in the archive.
+
+-x, --extract, --get
+              Extract files from an archive.  Arguments are optional
+```
+
+```bash
+OPTIONS
+
+--ignore-failed-read
+              Do not exit with nonzero on unreadable files.
+
+-f, --file=ARCHIVE
+              Use archive file or device ARCHIVE.
+```
+
+## Compresores
+
+`gzip` : No comprime directorios, solo ficheros
+
+`gzip -k <namefile>.tar`
+
+`gzip -l <name>` : Información de los archivos comprimidos
+
+`gunzip` : descomprime
+
+`bzip2` : compresses  files using the Burrows-Wheeler block sorting text compression algo‐
+       rithm, and Huffman coding
+
+`zip` : package and compress (archive) files (Compatible con Windows)
+
+`zip -r <name> <directorio>`
+
+`unzip <file>`
+
+Comprimir y empaquetar:
+
+`tar cvfz <name>.tar.gz <files>`
 
 ## Procesos
  - Un programa que se esta ejecutando
