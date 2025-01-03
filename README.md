@@ -391,8 +391,33 @@ EXAMPLES
 `bin`
 - No tienen shell, usuarios de sesión `no login`
 
-## Ficheros
+## Variables de Entorno
 
+`printenv` : Print all or part of enviroment 
+
+`set` : Establece o borra los valores de las opciones de shell y los parámetros
+posicionales.
+
+Para escribir el valor de una variable `printenv PWD` o `echo $PWD` (recomendado)
+
+`$<variable>` : Reemplaza el nombre por el valor de la variable
+
+`v=10` : Crear una variable que dura solo en la sesión del shell (no es permanente)
+
+`$PATH` : variable de entorno en Linux que contiene una lista de directorios donde 
+el sistema busca ejecutables cuando se ejecuta un comando en la terminal
+
+para añadir un nuevo directorio en la shell
+
+`PATH=$PATH:<Directory>`
+
+Modificar el PROMPT(texto que aparece en la terminal y que indica que está lista para recibir comandos):
+
+corresponde a la varibale de entorno `$PS1`
+
+
+
+## Ficheros
 Forma de guardar los datos. Usa una estructura tipo árbol
 
 
