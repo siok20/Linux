@@ -200,6 +200,76 @@ Necesitan entrada de otras instrucciones
 -> % git log --oneline | wc -l
 12
 ```
+## Comandos de búsqueda
+
+`sudo apt-get plocate`
+
+`locate` : Busca un fichero en una base de datos preindexada
+
+`sudo updatedb` : Crea o actualiza la base de datos
+
+`find` : search for files in a directory hierarchy
+
+`find [OPTION] [HEAD] -name "<file_name>"`
+
+````bash
+-amin n
+              File was last accessed less than, more than or exactly n minutes ago.
+
+-atime n
+              File was last accessed less than, more than or exactly  n*24  hours  ago
+
+-executable
+              Matches files which are executable and directories which are  searchable 
+
+-user uname
+              File is owned by user uname 
+
+-size n[cwbkMG]
+              File  uses  less  than, more than or exactly n units of space, rounding up.  The
+              following suffixes can be used:
+
+              `b'    for 512-byte blocks (this is the default if no suffix is used)
+
+              `c'    for bytes
+
+              `w'    for two-byte words
+
+              `k'    for kibibytes (KiB, units of 1024 bytes)
+
+              `M'    for mebibytes (MiB, units of 1024 * 1024 = 1048576 bytes)
+
+              `G'    for gibibytes (GiB, units of 1024 * 1024 * 1024 = 1073741824 bytes)
+
+              The + and - prefixes signify greater than and less than
+
+-type c
+              File is of type c:
+
+              b      block (buffered) special
+
+              c      character (unbuffered) special
+
+              d      directory
+
+              p      named pipe (FIFO)
+
+              f      regular file
+
+              l      symbolic  link; this is never true if the -L option or the -follow option
+                     is in effect, unless the symbolic link is broken.  If you want to  search
+                     for symbolic links when -L is in effect, use -xtype.
+
+              s      socket
+
+              D      door (Solaris)
+
+              To  search  for  more than one type at once, you can supply the combined list of
+              type letters separated by a comma `,' 
+```
+
+
+
 
 ## Procesos
  - Un programa que se esta ejecutando
