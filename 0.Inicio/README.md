@@ -41,6 +41,8 @@ Para redireccionar la salida de un comando a un fichero se usa `>` (sobreescribe
 
 `sudo -i` : acceder a consola superusuario
 
+`exit` : cerrar sesión del terminal
+
 `free -mh` : Visualizar memoria
 
 `top`: ver procesos
